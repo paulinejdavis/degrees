@@ -1,7 +1,10 @@
 
-name = "Lucky"
-# def name (Args)
-# statement
+name = "Luck"
+def give_me (a_name):
+    a_name = a_name + 'y'
+    return a_name
+
+print(give_me(name))
 
 
 ### EXERCISE 1 ###
@@ -144,13 +147,13 @@ print(total_apples)
 # print("timestamp: " + timestamp)
 
 
-### EXERCISE 3 ####
-"""
-Write a very simple encoding program that accepts a word from a user and encodes it
-by wrapping each letter with some other letters (symbols).
-
-Solution below - complete this together with the group
-"""
+# ### EXERCISE 3 ####
+# """
+# # Write a very simple encoding program that accepts a word from a user and encodes it
+# # by wrapping each letter with some other letters (symbols).
+# #
+# # Solution below - complete this together with the group
+# """
 
 # word = input("Enter the word you would like to encode: ")
 #
@@ -171,3 +174,85 @@ for char in word:
     result += encoded
 
 print("Encoded word:", result)
+
+
+
+### EXERCISE 1 ###
+"""
+You have friends at your house for dinner and you've accidentally burnt the lasagne. Time to order pizza.
+Write a program calculate how many pizzas you need to feed you and your friends
+"""
+
+# friends = 6
+# pizzas = friends * 0.5
+#
+# print('You need {} pizzas for {} friends'.format(pizzas, friends))
+
+"""
+Example solution with input
+"""
+# friends = int(input('How many friends are at your house? '))
+# pizzas = friends * 0.5
+# print('You need {} pizzas for {} friends'.format(pizzas, friends))
+
+
+
+
+
+
+############################################################################################################
+############################################################################################################
+############################################################################################################
+
+
+
+### EXERCISE 2 ###
+"""
+fetch current date and time to milliseconds and create a "timestamp" in the following format YYYYMMDD_HHMMSSMsMs
+
+For example: if the current date and time is "30 October 2020, 10h 25 min 41 sec and 123456 milliseconds",
+out timestamp must be:
+
+"20201030_22254112"
+
+"""
+
+# import datetime
+#
+# dt = datetime.datetime.now()
+# print(dt)  # check what we get back
+#
+# timestamp = dt.strftime('%Y%m%d_%H%M%S%f')[:-4]
+#
+# print("timestamp: " + timestamp)
+
+
+
+
+
+############################################################################################################
+############################################################################################################
+############################################################################################################
+
+
+
+
+
+### EXERCISE 3 ####
+"""
+Write a very simple encoding program that accepts a word from a user and encodes it
+by wrapping each letter with some other letters (symbols).
+
+Solution below - complete this together with the group
+"""
+
+word = input("Enter the word you would like to encode: ")
+
+result = ''
+
+for char in word:
+    encoded = 'xyz{}abc'.format(char)
+    result = result + encoded
+
+print(result)
+
