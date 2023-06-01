@@ -12,5 +12,6 @@ total_cost = 0
 
 for cost in costs:
     total_cost += cost
+  # total_cost = total_cost + cost
 
 print("Total cost:", total_cost)
